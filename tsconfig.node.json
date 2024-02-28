@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+    //change back to js, only compile panda css ts
+    // "target": "es5",
+    // "module": "commonjs",
+    // "lib": ["es5", "dom"],
+    // "noImplicitAny": false,
+    // "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true,
+    // "rootDir": "./",
+    // "outDir": "./dist",
+    // "declaration": true,
+    // "declarationDir": "./dist",
+    // "sourceMap": true,
+    // "inlineSourceMap": true,
+    // "removeComments": false,
+    // "noImplicitReturns": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "strictNullChecks": true,
+    // "noImplicitThis": true,
+    // "alwaysStrict": true,
+    // "moduleResolution": "node",
+    // "baseUrl": "./",
+    // "paths": {
+    //   "panda-css": ["./node_modules/panda-css/dist/index.js"]
+    // }
+  },
+  "include": ["vite.config.ts"]
+  // "include": ["./node_modules/panda-css/src/**/*.ts", "./src/**/*.ts"]
+}
