@@ -5,7 +5,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 const getAllRestaurantsUrl = import.meta.env.VITE_API_RESTAURANTS;
 
-function Content() {
+function Content({ modeData }) {
   const { isPending, error, data, isFetching } = useQuery({
     queryKey: ["restaurantData"],
     queryFn: async () => {
@@ -43,7 +43,14 @@ function Content() {
   // }, []);
 
   return (
-    <div className={center({ height: "100vh", flexDirection: "column" })}>
+    <div
+      className={center({
+        height: "100vh",
+        flexDirection: "column",
+        backgroundColor: modeData === "dark" ? "gray" : "azure",
+        color: modeData === "dark" ? "azure" : "darkslategray",
+      })}
+    >
       <div>{isFetching ? "Updating..." : ""}</div>
       {data.map((item) => (
         <div

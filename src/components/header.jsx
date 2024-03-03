@@ -1,20 +1,25 @@
 import { css } from "../../styled-system/css";
 import { center } from "../../styled-system/patterns";
-function Header() {
+import { ThemeControl } from "./themeControl";
+
+function Header({ modeData }) {
   const styles = css({
-    color: "darkgreen",
-    width: "80%",
+    backgroundColor: modeData === "dark" ? "gray" : "azure",
+    color: modeData === "dark" ? "azure" : "darkslategray",
+
+    width: "100%",
     fontSize: "2xl",
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: "gainsboro",
-    borderRadius: "9999px",
+
+    borderRadius: "15px",
     padding: "10px 15px",
     margin: "20px",
   });
   return (
     <div className={center({ width: "100vw" })}>
       <span className={styles}>Food Found 🍗</span>
+      <ThemeControl />
     </div>
   );
 }
